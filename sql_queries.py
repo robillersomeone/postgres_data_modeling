@@ -25,6 +25,7 @@ artist_table (artist_id varchar, artist_name varchar, artist_latitude decimal, a
 time_table_create = ("""CREATE TABLE IF NOT EXISTS time_table (song_time int);
 """)
 
+ 
 # INSERT RECORDS
 
 songplay_table_insert = ("""
