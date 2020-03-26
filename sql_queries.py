@@ -39,7 +39,7 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 
 user_table_insert = ("""INSERT INTO user_table
 (user_id, first_name, last_name, gender, level)
-VALUES (%s, %s, %s, %s, %s)
+VALUES (%s, %s, %s, %s, %s) ON CONFLICT ON CONSTRAINT user_table_pkey DO NOTHING;
 """)
 
 song_table_insert = ("""INSERT INTO song_table
@@ -49,7 +49,7 @@ VALUES (%s, %s, %s, %s, %s)
 
 artist_table_insert = ("""INSERT INTO artist_table
 (artist_id, artist_name, artist_latitude, artist_longitude)
-VALUES (%s, %s, %s, %s)
+VALUES (%s, %s, %s, %s) ON CONFLICT ON CONSTRAINT artist_table_pkey DO NOTHING;
 """)
 
 
