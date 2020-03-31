@@ -76,6 +76,6 @@ This script loads the JSON data from `data/song_data` and `data/log_data` to pop
 ### Other files
 `sql_queries.py` holds all of the sql code for dropping, creating, and insert data into the Postgres database
 
-the jupyter notebooks are for validating and tesing the ETL pipeline
+the jupyter notebooks are for validating and tesing the ETL pipeline are in the `etl_testing_and_validation` directory
 - `etl.ipynb`
 - `test.ipynb`
