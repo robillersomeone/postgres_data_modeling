@@ -59,7 +59,7 @@ ON CONFLICT ON CONSTRAINT artist_table_pkey DO NOTHING;
 
 time_table_insert = ("""INSERT INTO time_table
 (start_time, hour, day, week, month, year, weekday)
-VALUES (%s, %s, %s, %s, %s, %s, %s
+VALUES (%s, %s, %s, %s, %s, %s, %s)
 ON CONFLICT ON CONSTRAINT time_table_pkey DO NOTHING;
 """)
 
