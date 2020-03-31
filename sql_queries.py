@@ -35,27 +35,32 @@ time_table_create = ("""CREATE TABLE IF NOT EXISTS time_table
 songplay_table_insert = ("""INSERT INTO songplay_table
 (start_time, user_id, level, song_id, artist_id, session_id, location, user_agent)
 VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+ON CONFLICT ON CONSTRAINT songplay_table_pkey DO NOTHING;
 """)
 
 user_table_insert = ("""INSERT INTO user_table
 (user_id, first_name, last_name, gender, level)
-VALUES (%s, %s, %s, %s, %s) ON CONFLICT ON CONSTRAINT user_table_pkey DO NOTHING;
+VALUES (%s, %s, %s, %s, %s)
+ON CONFLICT ON CONSTRAINT user_table_pkey DO UPDATE SET level=EXCLUDED.level;
 """)
 
 song_table_insert = ("""INSERT INTO song_table
 (song_id, title, artist_id, year, duration)
 VALUES (%s, %s, %s, %s, %s)
+ON CONFLICT ON CONSTRAINT song_table_pkey DO NOTHING;
 """)
 
 artist_table_insert = ("""INSERT INTO artist_table
 (artist_id, artist_name, artist_latitude, artist_longitude)
-VALUES (%s, %s, %s, %s) ON CONFLICT ON CONSTRAINT artist_table_pkey DO NOTHING;
+VALUES (%s, %s, %s, %s)
+ON CONFLICT ON CONSTRAINT artist_table_pkey DO NOTHING;
 """)
 
 
 time_table_insert = ("""INSERT INTO time_table
 (start_time, hour, day, week, month, year, weekday)
-VALUES (%s, %s, %s, %s, %s, %s, %s)
+VALUES (%s, %s, %s, %s, %s, %s, %s
+ON CONFLICT ON CONSTRAINT time_table_pkey DO NOTHING;
 """)
 
 # FIND SONGS
