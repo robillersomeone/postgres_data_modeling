@@ -1,4 +1,4 @@
-# postgres_data_modeling
+#  🎶 data modeling with Postgres
 
 
 ## Overview
@@ -33,7 +33,7 @@ From the project directory in the terminal run
 
 `$ python create_tables.py`
 
-This script connects to a postgreSQL database to make a Sparkify database (or recreates it, if an instance already exists) and create the tables defined in the schema. It assumes there is a database `studentdb` to initially connect to.
+This script connects to a postgreSQL database to make a Sparkify database (or recreates it, if an instance already exists) and create the tables defined in the schema. It assumes postgres is installed and there is a database `studentdb` to initially connect to.
 
 **When the script is called**
 -  connection to the studentdb database is made and a cursor is established
