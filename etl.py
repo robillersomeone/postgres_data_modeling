@@ -40,7 +40,7 @@ def process_log_file(cur, filepath):
     t = pd.to_datetime(df['ts'], unit='ms')
 
     df['ts'] = t
-    timestamp = df['ts'].apply(lambda x: x.timestamp()).values
+    timestamp = df['ts'] # .apply(lambda x: x.timestamp()).values
     hour = df['ts'].apply(lambda x: x.hour).values
     day = df['ts'].apply(lambda x: x.day).values
     weekofyear = df['ts'].apply(lambda x: x.weekofyear).values

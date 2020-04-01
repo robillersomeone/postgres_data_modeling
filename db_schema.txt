@@ -1,0 +1,49 @@
+Table songplays {
+  songplay_id serial [pk]
+  start_time timestamp
+  user_id int
+  level varchar
+  song_id varchar
+  artist_id varchar
+  session_id int
+  location varchar
+  user_agent varchar
+}
+
+Table songs {
+  song_id varchar [pk]
+  title varchar
+  artist_id varchar
+  year int
+  duration decimal
+}
+
+Table time {
+  start_time timestamp [pk]
+  hour int
+  day int
+  week int
+  month int
+  year int
+  weekday int
+}
+
+Table users {
+  user_id int [pk]
+  first_name varchar
+  last_name varchar
+  gender varchar
+  level varchar
+}
+
+Table artists {
+  artist_id varchar [pk]
+  artist_name varchar
+  artist_latitude decimal
+  artist_longitude decimal
+}
+
+Ref: songplays.start_time - time.start_time
+Ref: songplays.user_id - users.user_id
+Ref: songplays.song_id - songs.song_id
+Ref: songplays.artist_id - artists.artist_id
