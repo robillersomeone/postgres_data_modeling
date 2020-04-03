@@ -18,7 +18,9 @@ song_id varchar,
 artist_id varchar,
 session_id int,
 location varchar,
-user_agent varchar);
+user_agent varchar
+UNIQUE (start_time, user_id, session_id)
+);
 """)
 
 user_table_create = ("""
