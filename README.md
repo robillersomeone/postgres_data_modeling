@@ -30,8 +30,9 @@ dimension tables
 ### to create an instance of the database
 
 From the project directory in the terminal run
-
-`$ python create_tables.py`
+```shell
+python create_tables.py
+```
 
 This script connects to a postgreSQL database to make a Sparkify database (or recreates it, if an instance already exists) and create the tables defined in the schema. It assumes postgres is installed and there is a database `studentdb` to initially connect to.
 
@@ -45,9 +46,9 @@ This script connects to a postgreSQL database to make a Sparkify database (or re
 
 
 ### to populate the database
-
-`$ python etl.py`
-
+```shell
+python etl.py
+```
 This script loads the JSON data from `data/song_data` and `data/log_data` to populate the tables.
 
 **When the script is called**
