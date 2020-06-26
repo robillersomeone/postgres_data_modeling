@@ -14,7 +14,7 @@ The data is stored in two directories as JSON which can be found nested in the
 
 The schema follows the star format with fact and dimension tables.
 
-<img src="./imgs/updated_database_schema.png" height="400px" width="600px">
+![image](https://user-images.githubusercontent.com/39356742/85817403-7dcca480-b733-11ea-9140-d8431b729e47.png)
 
 fact table
 - songplay
